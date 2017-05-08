@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+
+  </head>
+  <body>
+
+
+
+<nav class="navbar navbar-default " role="navigation">
+     <div class="container-fluid">
+<!--header section -->
+          <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+              
+          </div>
+<!-- menu section -->
+         <div class="collapse navbar-collapse navbar-ex1-collapse" >
+               <ul class="nav navbar-nav navbar-left">
+               <li><a href="http://localhost:3000 ">Home</a></li>
+               <li><a href="# ">About</a></li>
+               <li><a href="#">Admission</a></li>
+            
+
+
+   </ul>
+
+
+            <h5>    <ul class="nav navbar-nav navbar-right text-important">
+     <li> <span class="glyphicon glyphicon-user"  > <%= link_to "Sign Up  .", new_user_registration_path%> </span></li>
+      <li><span class="glyphicon glyphicon-log-in"><%= link_to "  Sign In", new_user_session_path%></span></li></h4>
+    </h5>
+            
+          </div>
+     </div>
+</nav>
+     <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">View Staff</a></li>
+                                <li><a href="#">Add New</a></li>
+                                <li><a href="#">Bulk Upload</a></li>
+                            </ul>
+                        </li>
+
+<script>
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Logo</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" class="">Home</a></li>
+                        <li class=" dropdown">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Departments <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class=" dropdown">
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Departments</a>
+                                </li>
+                                <li><a href="#">Add New</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="addnew.html">Add New</a></li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Managers <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">View Managers</a></li>
+                                <li><a href="#">Add New</a></li>
+                            </ul>
+                        </li>
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Staff <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">View Staff</a></li>
+                                <li><a href="#">Add New</a></li>
+                                <li><a href="#">Bulk Upload</a></li>
+                            </ul>
+                        </li>
+                        <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HR <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Change Time Entry</a></li>
+                                <li><a href="#">Report</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                  
+                        
+                        <ul class="nav navbar-nav navbar-right">
+  <h4>    <li> <span class="glyphicon glyphicon-user"> <%= link_to "Sign Up  ", new_user_registration_path%> </span></li>
+      <li><span class="glyphicon glyphicon-log-in"><%= link_to "  Sign In", new_user_session_path%></span></li></h4>
+    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <ul class='nav navbar-nav navbar-right'>
+    <div id="container">
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Signed  in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path  %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path%> |
+          <%= link_to "Login", new_user_session_path%>
+        <% end %>
+
+</ul>
+</nav>
+      </div>  -->
+
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
+
+      <%= yield %>
+
+
+
+
+
+
+
+<!-- ================ INICIA FORMULARIO DE LOGIN ==============================================================     
+<div class="container">
+    
+<div class="row" style="margin-top:60px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    	<form role="form">
+			<fieldset>
+				<h2>Please Sign In</h2>
+				<hr class="colorgraph">
+				<div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+				</div>
+				<div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+				</div>
+				<span class="button-checkbox">
+					<button type="button" class="btn" data-color="info">Remember Me</button>
+                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+					<a href="" class="btn btn-link pull-right">Forgot Password?</a>
+				</span>
+				<hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<a href="users/sign_up " class="btn btn-lg btn-primary btn-block">Register</a>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+</div>  
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+<!--
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <!-- html markup goes here -->
+</nav>
+
+
+<!--
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+     <!-- html markup goes here -->
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

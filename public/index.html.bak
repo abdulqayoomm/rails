@@ -1,0 +1,3 @@
+&amp;lt;% flash.each do |name, msg| %&amp;gt;
+  &amp;lt;%= content_tag :div, msg, :id =&amp;gt; "flash_#{name}" %&amp;gt;
+&amp;lt;% end %&amp;gt;

@@ -1,0 +1,14 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[type=text]:focus {
+    border: 5px solid #20d435;
+}
+
+form input[type='text']{
+width:350px;
+height:40px;
+}
+
+
